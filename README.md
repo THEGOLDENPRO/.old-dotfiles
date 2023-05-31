@@ -6,14 +6,16 @@
 
 </div>
 
+<br>
+
 > #### ⚠️ THIS WILL OVERWRITE YOUR SYSTEM'S CONFIGS WITH MINE.
-> ##### ❗ IF IT BRICKS YOUR SYSTEM DON'T BLAME ME BECAUSE I WARNED YOU.
+##### ❗ IF IT BRICKS YOUR SYSTEM DON'T BLAME ME BECAUSE I WARNED YOU.
 
 ## 🛠 *Install/Usage*
 1. **Git clone.**
 Make sure you clone this into the HOME directory.
 ```sh
-git clone https://github.com/THEGOLDENPRO/dotfiles
+git clone https://github.com/THEGOLDENPRO/.dotfiles
 ```
 
 2. **Run install script.**
