@@ -1,4 +1,5 @@
 {
     ".gitconfig": ".gitconfig",
-    "kdedefaults": ".config/kdedefaults"
+    "kdedefaults": ".config/kdedefaults",
+    "startup.sh": "startup.sh"
 }

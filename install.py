@@ -6,9 +6,13 @@ import argparse
 HOME_PATH = os.path.expanduser("~")
 
 parser = argparse.ArgumentParser()
-parser.add_argument('--overwrite', action=argparse.BooleanOptionalAction)
+parser.add_argument("--one-file", type=str, required=False)
+parser.add_argument("--overwrite", action=argparse.BooleanOptionalAction)
 
-OVERWRITE = parser.parse_args().overwrite
+args = parser.parse_args()
+
+ONE_FILE = args.one_file
+OVERWRITE = args.overwrite
 
 def remove_file(destination):
     dest = HOME_PATH + f'/{destination}'
@@ -42,5 +46,15 @@ def link_to_home(file_name: str, destination: str):
 if __name__ == "__main__":
     json_dict: dict = json.load(open("./dotfiles.json", mode="r"))
 
-    for file_name, dest in json_dict.items():
-        link_to_home(file_name, dest)
+    if ONE_FILE: # Link only this one file that has been specified.
+        file_name = os.path.split(os.path.abspath(ONE_FILE))[1]
+        dest = json_dict.get(file_name)
+
+        if dest is None:
+            print("That file is not in dotfiles.json! You may only install files listed in dotfiles.json")
+        else:
+            link_to_home(file_name, dest)
+
+    else: # Link all files in json.
+        for file_name, dest in json_dict.items():
+            link_to_home(file_name, dest)
