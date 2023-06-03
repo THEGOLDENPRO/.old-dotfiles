@@ -1,3 +1,3 @@
-#!bin/sh
+#!/bin/sh
 
-osb --startreplaybuffer
+obs --startreplaybuffer
