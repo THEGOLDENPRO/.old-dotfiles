@@ -1,7 +1,13 @@
 import os
+import sys
 import json
 import shutil
+import logging
 import argparse
+
+sys.path.insert(0, "./devgoldyutils")
+
+from devgoldyutils import add_custom_handler, LoggerAdapter, Colours
 
 HOME_PATH = os.path.expanduser("~")
 
@@ -14,9 +20,13 @@ args = parser.parse_args()
 ONE_FILE = args.one_file
 OVERWRITE = args.overwrite
 
+logger = add_custom_handler(logging.getLogger(Colours.CLAY.apply("💠 DotFiles")), logging.DEBUG)
+
 def remove_file(destination):
-    dest = HOME_PATH + f'/{destination}'
-    print(f"Deleting {dest}...")
+    func_logger = LoggerAdapter(logger, prefix="remove_func")
+
+    dest = HOME_PATH + f"/{destination}"
+    func_logger.debug(f"Deleting {dest}...")
 
     if os.path.isdir(dest):
         if os.path.islink(dest):
@@ -28,6 +38,8 @@ def remove_file(destination):
     os.remove(dest)
 
 def link_to_home(file_name: str, destination: str):
+    func_logger = LoggerAdapter(logger, prefix="link_func")
+
     source = f"{os.path.split(__file__)[0]}/{file_name}"
 
     code = os.system(
@@ -41,17 +53,18 @@ def link_to_home(file_name: str, destination: str):
             link_to_home(file_name, destination)
 
     else:
-        print(f"Linked {file_name} to '{destination}' successfully.")
+        func_logger.info(f"Linked {file_name} to '{destination}' successfully.")
 
 if __name__ == "__main__":
     json_dict: dict = json.load(open("./dotfiles.json", mode="r"))
+    logger.debug("Loaded dotfiles.json")
 
     if ONE_FILE: # Link only this one file that has been specified.
         file_name = os.path.split(os.path.abspath(ONE_FILE))[1]
         dest = json_dict.get(file_name)
 
         if dest is None:
-            print("That file is not stated in dotfiles.json! You may only install files listed in dotfiles.json")
+            logger.error("That file is not stated in dotfiles.json! You may only install files listed in dotfiles.json")
         else:
             link_to_home(file_name, dest)
 
