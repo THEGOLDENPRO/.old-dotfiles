@@ -51,7 +51,7 @@ if __name__ == "__main__":
         dest = json_dict.get(file_name)
 
         if dest is None:
-            print("That file is not in dotfiles.json! You may only install files listed in dotfiles.json")
+            print("That file is not stated in dotfiles.json! You may only install files listed in dotfiles.json")
         else:
             link_to_home(file_name, dest)
 
