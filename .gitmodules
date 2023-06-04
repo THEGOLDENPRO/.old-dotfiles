@@ -1,0 +1,4 @@
+[submodule "devgoldyutils"]
+	path = devgoldyutils
+	url = https://github.com/THEGOLDENPRO/devgoldyutils
+	branch = master
