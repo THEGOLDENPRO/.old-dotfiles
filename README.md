@@ -15,6 +15,7 @@
 1. **Git clone.**
 Make sure you clone this into the HOME directory.
 ```sh
+cd $HOME
 git clone https://github.com/THEGOLDENPRO/.dotfiles
 ```
 
