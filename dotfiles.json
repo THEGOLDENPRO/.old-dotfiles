@@ -2,6 +2,8 @@
     ".gitconfig": ".gitconfig",
 
     "kdedefaults": ".config/kdedefaults",
+    "kglobalshortcutsrc": ".config/kglobalshortcutsrc",
+    "kwinrulesrc": ".config/kwinrulesrc",
     "konsole": ".local/share/konsole",
 
     "startup.sh": "startup.sh",

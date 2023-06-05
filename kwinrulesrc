@@ -1,0 +1,54 @@
+[$Version]
+update_info=kwinrules.upd:replace-placement-string-to-enum,kwinrules.upd:use-virtual-desktop-ids
+
+[86142a62-0f87-4714-9269-a6d10909b878]
+Description=Application settings for code
+clientmachine=localhost
+minsize=1280,720
+opacityactive=90
+opacityactiverule=2
+title=Spotify
+wmclass=code
+wmclassmatch=1
+
+[979bcd10-bf9d-4192-b6aa-e03561e7b34c]
+Description=Application settings for discord
+clientmachine=localhost
+minsize=1280,720
+opacityactive=95
+opacityactiverule=2
+title=Spotify
+wmclass=discord
+wmclassmatch=1
+
+[General]
+count=5
+rules=ca7e9c97-dba2-477f-8b71-b1d1c23fc958,979bcd10-bf9d-4192-b6aa-e03561e7b34c,b3ae1a14-e1fc-4cf8-9d41-2f5122a7d90c,c11020e1-6a85-451a-9341-5d9b77ab24dc,86142a62-0f87-4714-9269-a6d10909b878
+
+[b3ae1a14-e1fc-4cf8-9d41-2f5122a7d90c]
+Description=Application settings for spotify
+clientmachine=localhost
+opacityactive=95
+opacityactiverule=2
+title=Spotify
+wmclass=spotify
+wmclassmatch=1
+
+[c11020e1-6a85-451a-9341-5d9b77ab24dc]
+Description=Application settings for dolphin
+clientmachine=localhost
+opacityactive=80
+opacityactiverule=2
+title=Spotify
+wmclass=dolphin
+wmclassmatch=1
+
+[ca7e9c97-dba2-477f-8b71-b1d1c23fc958]
+Description=Application settings for steam_app_284160
+clientmachine=localhost
+minsize=1280,720
+minsizerule=2
+opacityactive=95
+title=Spotify
+wmclass=steam_app_284160
+wmclassmatch=1
