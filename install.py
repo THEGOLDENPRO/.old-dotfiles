@@ -48,7 +48,7 @@ def link_to_home(file_name: str, destination: str):
 
     if code == 256:
 
-        if OVERWRITE or input(f"'{file_name}' already exists do you want to overwrite? [y/n] ").lower() == "y":
+        if OVERWRITE or input(Colours.ORANGE.apply(f"'{file_name}' already exists do you want to overwrite? [y/n] ")).lower() == "y":
             remove_file(destination)
             link_to_home(file_name, destination)
 
