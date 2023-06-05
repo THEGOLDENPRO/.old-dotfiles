@@ -1,6 +1,9 @@
 {
     ".gitconfig": ".gitconfig",
+
     "kdedefaults": ".config/kdedefaults",
+    "konsole": ".local/share/konsole",
+
     "startup.sh": "startup.sh",
     "startup.desktop": "/etc/xdg/autostart/startup.desktop"
 }
