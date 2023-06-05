@@ -25,6 +25,7 @@ git clone https://github.com/THEGOLDENPRO/.dotfiles
 ⚠️ You should stop here if you don't want your configs to be overwritten and lost forever. :) *(trust me it's not fun, I'm warning you)*
 ```sh
 cd .dotfiles
+git submodule update --recursive --remote # Pull devgoldyutils libaray.
 python install.py
 ```
 
