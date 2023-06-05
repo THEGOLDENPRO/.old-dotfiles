@@ -28,6 +28,8 @@ cd .dotfiles
 python install.py
 ```
 
+<br>
+
 If you would like to only link a single file, the ``--one-file`` argument will help you with that:
 ```sh
 python install.py --one-file {file_name_as_in_json}
