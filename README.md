@@ -4,7 +4,7 @@
 
   <sub>My Linux KDE dot files.</sub>
   
-  <img src="https://github.com/THEGOLDENPRO/.dotfiles/assets/66202304/2fee3f3f-fcf5-4686-a94c-41d79cf516a5" width="900px">
+  <img src="https://github.com/THEGOLDENPRO/.dotfiles/assets/66202304/760582a4-799a-4336-b6dc-3f3a4105b44e" width="900px">
 
 </div>
 
